@@ -60,7 +60,7 @@ endcase
 
 <div class="layout layout--row layout--top">
   <div class="columns">
-    <div class="column" data-list-limit="true" data-list-hidden-count="true" data-list-max-columns="2">
+    <div class="column" data-list-limit="true" data-list-hidden-count="true" data-list-max-columns="1">
       {% if all == empty %}
       <div class="flex flex--col gap--space-between">
       <span class="title">Perfection</span>
@@ -91,7 +91,7 @@ endcase
         </div>
         <div class="content">
           {% if item.c == "Yes" %}
-              <span class="title title--small p--3 bg-black text--white clamp--1">{{ item.n | prepend: importance }}</span>
+              <span class="title title--small bg-black text--white clamp--1">{{ item.n | prepend: importance }}</span>
             {% else %}
               <span class="title title--small clamp--1">{{ item.n | prepend: importance }}</span>
             {% endif %}
@@ -133,6 +133,6 @@ endcase
   {% when "your_name" %}
   <span class="instance">{{ trmnl.user.name }}</span>
   {% when "counts" %}
-  <span class="instance">{{ c_t }} / {{ t }} Completed today!</span>
+  <span class="instance">{{ c_t }} Completed today! {{ t }} left</span>
   {% endcase %}
 </div>
