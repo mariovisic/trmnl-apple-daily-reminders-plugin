@@ -80,6 +80,7 @@ custom_fields:
   options:
   - Attribution
   - Your Name
+  - Counts
   - Blank
   default: attribution
   name: Right Label

@@ -9,12 +9,15 @@ watch:
 # values of custom fields (defined in src/settings.yml)
 custom_fields: {
   show_notes: 'yes',
-  show_list_names: 'no'
+  show_list_names: 'no',
+  right_label: 'counts'
 }
 
 # override variables
 variables:
-  trmnl: { plugin_settings: { instance_name: 'Reminders'  } }
+  trmnl: { plugin_settings: { instance_name: 'Reminders' } }
+  t: 14
+  c_t: 2
   all: [
     {
       "c": "Yes",
