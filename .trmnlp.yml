@@ -1,0 +1,102 @@
+# TRMNLP configuration
+# {{ env.VARIABLE }} interpolation is available here
+---
+# auto-reload when files change (`watch: false` to disable)
+watch:
+  - .trmnlp.yml
+  - src
+
+# values of custom fields (defined in src/settings.yml)
+custom_fields: {
+  show_notes: 'yes'
+}
+
+# override variables
+variables:
+  trmnl: { plugin_settings: { instance_name: 'Reminders'  } }
+  todo: [
+    {
+      "d": "2024-06-01",
+      "f": false,
+      "l": "Reoccuring",
+      "n": "Update Kat and Mario's budgeting",
+      "o": "test description",
+      "p": "None",
+      "t": ""
+    },
+    {
+      "d": "2024-10-21",
+      "f": false,
+      "l": "To Sort",
+      "n": "Get refund for Peppers food (Petstock Coburg)",
+      "o": "",
+      "p": "None",
+      "t": ""
+    },
+    {
+      "d": "2024-10-31",
+      "f": false,
+      "l": "Grocies",
+      "n": "Read through this: https://www.relationships.org.au/document/separation-or-divorce-is-a-complex-process-2013-what-should-i-do/",
+      "o": "",
+      "p": "None",
+      "t": ""
+    },
+    {
+      "d": "2025-01-02",
+      "f": false,
+      "l": "Grocies",
+      "n": "New clothes for myself (ASColor shirts “classic large” + underwear, Uniqlo medium, can get boxer briefs elsewhere though)",
+      "o": "",
+      "p": "None",
+      "t": ""
+    },
+    {
+      "d": "2025-01-02",
+      "f": false,
+      "l": "Grocies",
+      "n": "New Clothes for Niko",
+      "o": "",
+      "p": "None",
+      "t": ""
+    },
+    {
+      "d": "2025-01-03",
+      "f": false,
+      "l": "Work (Ferocia)",
+      "n": "schedule a slack message for Monday with a votr for a 5 min presentsrion.",
+      "o": "Ideas for options:\n  - Creating good APIs (clear intent, encapsulation, information hiding): \n  - Liskov substitution principle\n - Open / Close <== this might be good, it’s new but not too far of a stretch from “tell don’t ask”\n  - Zone of proximal development: People fail because the stretch is too big, or there’s not enough support, you don’t get into the zone by repeating yourself with slightly modified language. L",
+      "p": "None",
+      "t": ""
+    },
+    {
+      "d": "2025-04-19",
+      "f": false,
+      "l": "Reoccuring",
+      "n": "Pay quarterly tax",
+      "o": "",
+      "p": "None",
+      "t": ""
+    },
+    {
+      "d": "2025-05-04",
+      "f": false,
+      "l": "Personal",
+      "n": "Book a vet appointment",
+      "o": "",
+      "p": "None",
+      "t": ""
+    }
+  ]
+  completed: [
+    # {
+    #   "d": "2025-04-19",
+    #   "f": false,
+    #   "l": "Reoccuring",
+    #   "n": "Pay quarterly tax",
+    #   "o": "",
+    #   "p": "None",
+    #   "t": ""
+    # }
+]
+
