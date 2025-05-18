@@ -54,17 +54,21 @@ endcase
 {% endcapture %}
 {% endunless %}
 
+<style>
+
+</style>
+
 <div class="layout layout--row layout--top">
   <div class="columns">
     <div class="column" data-list-limit="true" data-list-hidden-count="true" data-list-max-columns="2">
-      {% if todo == empty %}
+      {% if all == empty %}
       <div class="flex flex--col gap--space-between">
       <span class="title">Perfection</span>
       <span class="description">Nothing to do! Go have some fun</span>
       <img class="image" src="https://raw.githubusercontent.com/mariovisic/trmnl-apple-daily-reminders-plugin/refs/heads/main/src/images/icons8-zen-100.png">
       </div>
       {% else %}
-      {% for item in todo %}
+      {% for item in all %}
       {% liquid
       case item.p
       when "Low"
@@ -86,7 +90,11 @@ endcase
           {% endif %}
         </div>
         <div class="content">
-          <span class="title title--small clamp--1">{{ item.n | prepend: importance }}</span>
+          {% if item.c == "Yes" %}
+              <span class="title title--small p--3 bg-black text--white clamp--1">{{ item.n | prepend: importance }}</span>
+            {% else %}
+              <span class="title title--small clamp--1">{{ item.n | prepend: importance }}</span>
+            {% endif %}
           <div class="flex gap--small">
             {% if show_dates_and_times %}
             <span class="label label--small label--underline">{{ item.d | l_date: date_format, trmnl.user.locale }}</span>
